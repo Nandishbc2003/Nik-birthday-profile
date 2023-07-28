@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<center>
+  <title>Happy Birthday Effect</title>
+  <style>
+    /* Styles for the animated background */
+    body {
+      background-image: url(qpeg);
+      background-size:cover;
+      background-position: center;
+      animation: zoomInOut 3s infinite alternate;
+    }
+
+    /* Keyframes for the zoom in and zoom out animation */
+    @keyframes zoomInOut {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Styles for the birthday animation */
+    .birthday-animation {
+      display: inline-block;
+      font-size: 48px;
+      animation: rotate 5s infinite;
+    }
+
+    /* Keyframes for the rotation animation */
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="birthday-animation">Happy Birthday!</h1>
+</body>
+</html><br><br><br><br>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Educational Portfolio</title>
+  <style>
+    /* Box styles */
+    .portfolio-box {
+      width: 400px;
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Row styles */
+    .portfolio-row {
+      margin-bottom: 10px;
+    }
+
+    /* Color-coded rows */
+    .portfolio-row:nth-child(odd) {
+      background-color: #e8f4fd;
+    }
+
+    .portfolio-row:nth-child(even) {
+      background-color: #f7f7f7;
+    }
+
+    /* Animation styles */
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .portfolio-row {
+      animation: slideIn 0.5s ease-in-out;
+    }
+  </style><br><br>
+</head><!DOCTYPE html>
+<html>
+<head>
+  <title>Educational Portfolio</title>
+  <style>
+    /* Box styles */
+    .portfolio-box {
+      display: none;
+      width: 400px;
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Row styles */
+    .portfolio-row {
+      margin-bottom: 10px;
+    }
+
+    /* Color-coded rows */
+    .portfolio-row:nth-child(odd) {
+      background-color: #e8f4fd;
+    }
+
+    .portfolio-row:nth-child(even) {
+      background-color: #f7f7f7;
+    }
+
+    /* Animation styles */
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .portfolio-row {
+      animation: slideIn 0.5s ease-in-out;
+    }
+  </style>
+</head><br><br><br>
+<body><!DOCTYPE html>
+<html>
+<head>
+  <title>Fitted Image Box</title>
+  <style>
+    /* Page styles */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Box styles */
+    .image-box {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      border: 10px solid #000;
+      overflow: hidden;
+    }
+
+    /* Image styles */
+    .image-box img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Shining effect */
+    .image-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+      animation: shiningEffect 2s infinite;
+    }
+
+    @keyframes shiningEffect {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+
+    /* Changing background */
+    body {
+      background-color: #f0f0f0;
+      transition: background-color 0.5s ease-in-out;
+    }
+
+    body.dark {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body><br><br>
+  <div class="image-box">
+    <img src="a.jpg" alt="Image">
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var body = document.body;
+      var imageBox = document.querySelector(".image-box");
+
+      imageBox.addEventListener("mouseover", function() {
+        body.classList.add("dark");
+      });
+
+      imageBox.addEventListener("mouseout", function() {
+        body.classList.remove("dark");
+      });
+    });
+  </script>
+</body>
+</html><br><br><br>
+
+  <button onclick="togglePortfolio()"> PORTFOLIO</button>
+
+  <div id="portfolio" class="portfolio-box">
+    <div class="portfolio-row">
+      <strong>NAME:NIKHIL BC</strong> 
+    </div>
+    <div class="portfolio-row">
+      <strong>College:</strong> ACS COLLEGE OF ENGINEERING
+    </div>
+    <div class="portfolio-row">
+      <strong>Year:</strong> 2019-2023
+    </div>
+    <div class="portfolio-row">
+      <strong>Major:</strong> EMBEDDED SYSTEMS 
+    </div>
+    <div class="portfolio-row">
+      <strong>GPA:</strong> 8.9
+    </div>
+  </div>
+
+  <script>
+    function togglePortfolio() {
+      var portfolio = document.getElementById("portfolio");
+      if (portfolio.style.display === "none") {
+        portfolio.style.display = "block";
+      } else {
+        portfolio.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
+
+<br /><br /><br />
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Box Designed by Nandish BC</title>
+  <style>
+    /* Box styles */
+    .nandish-box {
+      width: 300px;
+      height: 200px;
+      background-color: #f0f0f0;
+      border: 2px solid #333;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .nandish-box h2 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .nandish-box p {
+      margin: 10px 0 0;
+    }
+
+    .nandish-box a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nandish-box a:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="nandish-box">
+    <h2>Box Designed by Nandish BC</h2>
+    <p>Frontend Developer</p>
+    <a href="   https://my-portfolio.nandishbc2003.repl.co/">Visit portfolio</a>
+  </div>
+</body>
+</html>
+
